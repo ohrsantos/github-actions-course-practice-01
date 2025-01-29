@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output GitHub context
-        run: echo "${{ toJSON(github) }}" | grep issue
+        run: echo "${{ toJSON(github.event) }}"
+        #run: echo "${{ toJSON(github) }}" | grep issue
